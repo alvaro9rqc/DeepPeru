@@ -1,7 +1,7 @@
 {
-  "name": "@deepperu/backend",
+  "name": "deepperu-backend",
   "version": "0.0.1",
-  "description": "",
+  "description": "DeepPeru Backend API",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
@@ -9,6 +9,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
+    "dev": "nest start --watch",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -21,6 +22,10 @@
     "db:seed": "ts-node prisma/seed.ts create",
     "db:seed:delete": "ts-node prisma/seed.ts delete",
     "db:seed:reset": "ts-node prisma/seed.ts delete && ts-node prisma/seed.ts create"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
   "dependencies": {
     "@nestjs/common": "11.0.1",
